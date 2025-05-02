@@ -1,4 +1,9 @@
-module ir_decoder (
+module ir_decoder 
+# (
+	parameter T0 = 279000,
+	parameter T1 = 55000,
+	parameter START = 127500       
+) (
 	input wire clk,
         input wire rst,
 	input wire ack,
@@ -6,13 +11,14 @@ module ir_decoder (
         input wire ir_input,
         output reg ready,
         output wire [31:0] command,
+	output wire test
 );
-	localparam T0_MIN = (28256-2816)/64;						// number of clocks in positive signal that correspond to 0 (time*frequency = 1.13 ms * 25000000)
-	localparam T0_MAX = (28256+2816)/64;
-	localparam T1_MIN = (57008-5648)/64;						// number of clocks in positive signal that correspond to 1 (time * frequency = 2.28ms * 25000000)
-	localparam T1_MAX = (57008+5648)/64;
-	localparam START_MIN = (128176-6400)/64;					// number of clocks in positive signal that correspond to the start bit
-	localparam START_MAX = (128176+6400)/64;
+	localparam T0_MIN = T0*95/6400;						// number of clocks in positive signal that correspond to 0 (time*frequency = 1.13 ms * 25000000)
+	localparam T0_MAX = T0*105/6400;
+	localparam T1_MIN = T1*95/6400;						// number of clocks in positive signal that correspond to 1 (time * frequency = 2.28ms * 25000000)
+	localparam T1_MAX = T1*105/6400;
+	localparam START_MIN = START*95/6400;					// number of clocks in positive signal that correspond to the start bit
+	localparam START_MAX = START*105/6400;
 	
 	reg [15:0] slow_clk_div;
 	wire slow_clk;
@@ -39,6 +45,8 @@ module ir_decoder (
 	assign command[31:0] = cmd[31:0];
 
 	assign strobe_front = (ir_input_last != ir_input) * ir_input;			// clock front condition
+	
+	assign test = strobe_front;
 
 	always @(posedge slow_clk or posedge rst)
         begin
@@ -93,7 +101,7 @@ module ir_decoder (
 					end
 				end
 
-				if (ack == 1) ready <= 1'd0;				// auxiliary signal to prevent commands from being repeated
+				//if (ack == 1) ready <= 1'd0;				// auxiliary signal to prevent commands from being repeated
 
                         end
                 end
