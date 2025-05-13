@@ -3,17 +3,14 @@
 ### План работ
 
 - [План освоения тулов для синтеза цифровых схем на основе Yosys](https://github.com/pointcheck/learning-fgpa/blob/main/Learning-Plan.md)
-- [План по созданию конечного автомата (КА) для управления моторизированной тележкой от ИК пульта ДУ](https://github.com/pointcheck/learning-fgpa/blob/main/IR_RC_Cart.md)
+- [План по созданию КА для управления тележкой от ИК пульта ДУ](https://github.com/pointcheck/learning-fgpa/blob/main/IR_RC_Cart.md)
+- [План работ по расширению аппаратной и программной части синтезируемой СнК "Карно"](https://github.com/pointcheck/learning-fgpa/blob/main/Extending_KarnixSoC.md)
 
 ### Репозитории
 
-- [Простейший проект для синтеза под плату "Карно"](https://github.com/pointcheck/KarnixSimpleProject)  
-- [Модуль цифровой схемы для формирования управляющих сигналов электродвигателем (PWM)](motor_drv/)
-- [Модуль цифровой схемы для формирования управляющих сигналов серводвигателем (PDM)](motor_pdm/)
-- [Модуль цифровой схемы для декодирования сигналов с ИК приемника (ИК декодер)](ir_decoder/)
-- [Модуль цифровой схемы для кодирования 32-битных команд в ИК сигналы стандартного формата по NECx2 протоколу (ИК энкодер)](ir_encoder/)
-- [Модуль цифровой схемы для исправления дребезга кнопок и формирования строба (Анти-дребезг)](debouncer/)
-- [Модуль цифровой схемы для управления движением тележки (Control)](control/)
+- [Простейший проект для синтеза под плату "Карно"](https://github.com/pointcheck/KarnixSimpleProject)
+- [Blink - классика для MIK32 AMUR пр-ва зеленоградского АО "Микрон"](https://github.com/Fabmicro-LLC/MIK32_Blink)
+- [Модуль цифровой схемы для формирования управляющих сигналов электродвигателем (PWM)](MotorDRV/)
 
 ### Полезные ссылки
 
@@ -29,9 +26,3 @@
 - [Разработка цифровой аппаратуры нетрадиционным методом: Yosys, SpinalHDL, VexRiscv (ч.2)](https://habr.com/ru/articles/802127/)
 - [Разработка цифровой аппаратуры нетрадиционным методом: CGA видеоадаптер на SpinalHDL](https://habr.com/ru/articles/855718/)
 - [Тестирование встроенного АЦП (ADC) на MIK32 AMUR (К1948ВК018)](https://habr.com/ru/articles/836796/)
-
-### Другое
-
-- [Blink - классика для MIK32 AMUR пр-ва зеленоградского АО "Микрон"](https://github.com/Fabmicro-LLC/MIK32_Blink)
-- [План работ по расширению аппаратной и программной части синтезируемой СнК "Карно"](https://github.com/pointcheck/learning-fgpa/blob/main/Extending_KarnixSoC.md)
-

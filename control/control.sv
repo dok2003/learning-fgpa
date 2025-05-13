@@ -13,7 +13,6 @@ module control
 	input  logic clk,
 	input  logic rst,
 	input  logic ir_ready,
-	input  logic adc_ready,
 	input  logic can_move_fwd,
 	input  logic [31:0] command,
 	output logic state,					
@@ -56,17 +55,18 @@ module control
 
 		end else begin		
 
-			if (adc_ready) ctl_valid <= 1'd0;					// VALID signal is always 1 to work with ADCPolling, IRDecoder modules
+			ctl_valid <= 1'd1;				// VALID signal is always 1 to work with ADCPolling, IRDecoder modules
 
-		        if (~can_move_fwd && adc_ready) begin				// Stopping if photodiode detects obstruction ahead
-		                motor_dc <= 8'd0;
+		        if (~can_move_fwd) begin				// Stopping if photodiode detects obstruction ahead
+//				motor_dc <= 8'd0;
+				direction <= 1'd0;
 			end
 			
-			if (ir_ready && adc_ready) begin					// Processing signal if IRDecoder is ready
+			if (ir_ready) begin					// Processing signal if IRDecoder is ready
 
 				case (command)					// Turning cart ON/OFF
-					32'h6897FF00:	state <= 1'd1;
-					32'h7788FF00:	begin
+					32'hFE010707:	state <= 1'd1;	// "source" button
+					32'hFB040707:	begin		// "1" button
 								state <= 1'd0;
 								motor_dc <= 8'd0;
 								servo_dc <= 8'(servo_center);
@@ -77,37 +77,37 @@ module control
 		
 					case (command)				// Check README.md file for command list
 
-					32'h6A95FF00:	direction <= 1'd1;
-					32'h659AFF00:	direction <= 1'd0;
+					32'hED120707:	direction <= 1'd1;	// "ch+" button
+					32'hEF100707:	direction <= 1'd0;	// "ch-" button
 
 					
-					32'h649BFF00:	if (servo_dc <= 8'(servo_max - servo_step)) begin
+					32'h9A650707:	if (servo_dc <= 8'(servo_max - servo_step)) begin	// "arrow left" button
 								servo_dc <= servo_dc + 8'(servo_step);
 							end
 
-					32'h6699FF00:	if (servo_dc >= 8'(servo_min + servo_step)) begin
+					32'h9D620707:	if (servo_dc >= 8'(servo_min + servo_step)) begin	// "arrow right" button
 								servo_dc <= servo_dc - 8'(servo_step);
 							end				
 
-					32'h7C83FF00:	if (can_move_fwd && motor_dc <= 8'(motor_max - motor_step)) begin
+					32'h9F600707:	if (can_move_fwd && motor_dc <= 8'(motor_max - motor_step)) begin	// "arrow up" button
 								motor_dc <= motor_dc + 8'(motor_step);
 							end
 
-					32'h6F90FF00:	if (motor_dc >= 8'(motor_min + motor_step)) begin
+					32'h9E610707:	if (motor_dc >= 8'(motor_min + motor_step)) begin	// "arrow down" button
 								motor_dc <= motor_dc - 8'(motor_step);
 							end
 
-					32'h619EFF00:	motor_dc <= 8'd0;
-					32'h6D92FF00:	servo_dc <= 8'(servo_center);			
+					32'h86790707:	motor_dc <= 8'd0;					// "home" button
+					32'h97680707:	servo_dc <= 8'(servo_center);				// "enter" button
 					
 					endcase
 				end
 
 				ack <= 1'd1;				// Setting acknowledge signal after processing every command to clear ir_ready
 
-			end else
+			end else begin
 				ack <= 1'd0;				// Clearing acknowledge signal if IRDecoder didn't send a command during last clock cycle
-				ctl_valid <= 1'd1;
+			end
 		end
 	end
 

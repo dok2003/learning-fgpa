@@ -12,9 +12,11 @@ module top
 
 	output logic [3:0] gpio
 );
-	
+
 	logic rst;
+	logic en;
 	logic ctl_valid;
+	logic adc_ack;
 	logic [2:0] address;
 	logic dout_bit;
 	logic sclk;
@@ -22,7 +24,6 @@ module top
 	logic adc_ready;
 	logic din_bit;
 	logic [11:0] d_signal;
-	logic test_flag;
 
 	adc_capture # (
 		.clk_hz(25000000),
@@ -31,7 +32,9 @@ module top
 	) adc_capture_inst (
 		.clk(clk25),
 		.rst(rst),
-		.ctl_valid(ctl_valid && ~test_flag),
+		.en(en),
+		//.ctl_valid(ctl_valid),
+		.adc_ack(adc_ack),
 		.address(address),
 		.dout_bit(dout_bit),
 		.sclk(sclk),
@@ -41,16 +44,43 @@ module top
 		.d_signal(d_signal)
 	);
 
-	always_ff @(posedge sclk or posedge rst) begin
+/*	localparam CLOCK_DIV = 25000000 / (2 * sclk2_hz) - 1;
+	logic [$clog2(CLOCK_DIV) - 1:0] clkdiv;
+
+	logic sclk2;
+	always_ff @(posedge clk25 or posedge rst) begin
 
 		if (rst) begin
-			ctl_valid <= 1'd1;
-			address <= 3'b011;
-			test_flag <= 1'd0;			
-			dout_bit <= 1'd0;
+			clkdiv <= 'd0;
+			sclk2 <= 1'd0;
+
+		end else if (clkdiv == CLOCK_DIV) begin
+			sclk2 <= ~sclk2;
+		end else begin
+			clkdiv <= clkdiv + 'd1;
+		endi
+
+	end
+*/
+	always_ff @(posedge clk25 or posedge rst) begin
+
+		if (rst) begin
+			en <= 1'd1;
+			adc_ack <= 1'd0;
+			address <= 3'b000;			
+			
+		end else begin
+		       	/*if (adc_ready) begin
+			adc_ack <= 1'd1;
+			address <= 3'b000;
+			
+			end else begin
+				adc_ack <= 1'd0;
+			end*/
+			if (key[2:0] == 3'b101) begin
+				en <= 1'd0;
+			end
 		end
-		
-		else if (key[2:0] == 3'b101) test_flag <= 1'b1;
 
 	end
 
@@ -65,16 +95,17 @@ module top
 	assign gpio[3] = dout_bit;
 
 	assign rst = key[3];
-	
-	assign led = {1'd0, din_bit, dout_bit, test_flag};
 
 	always_comb begin
+
 		case (key[2:0])
 
-			3'b001: led = d_signal[3:0];
+			3'b011: led = d_signal[3:0];
 			3'b010: led = d_signal[7:4];
-			3'b011: led = d_signal[11:8];
+			3'b001: led = d_signal[11:8];
 			3'b100: led = {1'b0, address};
+
+			default: led = {rst, cs, adc_ack, adc_ready};
 
 		endcase
 
