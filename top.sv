@@ -119,8 +119,8 @@ module top (
 	adc_hysteresis
 	# (
 		
-		.x_High(12'd1600),
-		.x_Low(12'd1000),
+		.x_High(12'd1246),
+		.x_Low(12'd1059),
 	) hysteresis_inst (
 		.rst(rst),
 		.clk(clk25),

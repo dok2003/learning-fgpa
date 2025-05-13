@@ -43,7 +43,7 @@ module adc_capture
 
 	logic [7:0] din;						// Declaring what to send to the DIN port: 000 + address(3-bit) + 00
 	logic [15:0] dout;						// Declaring what to get from the DOUT port: 0000 + d_signal(12-bit)
-	assign d_signal = dout[12:1];
+	assign d_signal =32'd4095- dout[11:0];
 
 	logic [4:0] cs_reg;						// cs_reg(4-bit) is used to count length of ADC's work cycle (16 slowed clocks sclk)
 	logic [$clog2(cycle_pause) - 1:0] cs_pause;			// cs_pause is used to count length of ADC's pause between work cycles (cycle_pause slowed clocks)

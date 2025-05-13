@@ -25,7 +25,9 @@ module control
 
 	localparam MAX_DIV = clk_hz / (2 * sclk_hz);				// Declaring parameter of max number for clock divider to count to
 	logic [$clog2(MAX_DIV)-1:0] frdiv;					// frdiv - clock dividing counter (frequency divider)
-
+	logic [7:0] timer;
+	logic stall;
+	logic stk;
 	logic sclk;
 	always_ff @(posedge clk or posedge rst) begin				// Dividing frequency from clk_hz to sclk_hz
 
@@ -52,16 +54,34 @@ module control
 			motor_dc <= 8'd0;
 			direction <= 1'd1;
 			servo_dc <= 8'(servo_center);
-
+			timer[7:0]<=8'd0;
+			stall <= 'd0;
+			stk <= 'd0;
 		end else begin		
 
 			ctl_valid <= 1'd1;				// VALID signal is always 1 to work with ADCPolling, IRDecoder modules
 
 		        if (~can_move_fwd) begin				// Stopping if photodiode detects obstruction ahead
-//				motor_dc <= 8'd0;
 				direction <= 1'd0;
+				stall <= 1'd1;
+				motor_dc <= 8'(motor_max);
+				stk <= 'd1;
 			end
 			
+			if(stall) begin
+				servo_dc <= 8'd50;
+				if (timer <= 8'd250)
+					timer <=timer + 1'd1;
+                                else begin
+                                        direction <=1'd1;
+                                        timer <= 8'd0;
+                                        motor_dc <= 8'd0;
+					servo_dc <= 8'(servo_center);	
+					stk <= 'd0;
+					stall <= 'd0;	
+                                end
+			end 
+			//if(can_move_fwd) stall <= 'd0;
 			if (ir_ready) begin					// Processing signal if IRDecoder is ready
 
 				case (command)					// Turning cart ON/OFF

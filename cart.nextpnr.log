@@ -1,0 +1,750 @@
+Info: constraining clock net 'clk25' to 25.00 MHz
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:       858/24288     3%
+Info:         logic LUTs:    544/24288     2%
+Info:         carry LUTs:    314/24288     1%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
+
+Info:      Total DFFs:       212/24288     0%
+
+Info: Packing IOs..
+Info: $gpio[9]$iobuf_i: gpio_TRELLIS_FF_Q_1.Q
+Info: pin 'gpio[9]$tr_io' constrained to Bel 'X0/Y32/PIOB'.
+Info: $gpio[8]$iobuf_i: gpio[8]$const$VCC$1925.Y
+Info: pin 'gpio[8]$tr_io' constrained to Bel 'X18/Y50/PIOA'.
+Info: $gpio[7]$iobuf_i: gpio_TRELLIS_FF_Q.Q
+Info: pin 'gpio[7]$tr_io' constrained to Bel 'X0/Y29/PIOD'.
+Info: $gpio[6]$iobuf_i: gpio_TRELLIS_FF_Q_2.Q
+Info: pin 'gpio[6]$tr_io' constrained to Bel 'X0/Y29/PIOC'.
+Info: $gpio[5]$iobuf_i: gpio[5]$const$GND$1924.Y
+Info: pin 'gpio[5]$tr_io' constrained to Bel 'X0/Y29/PIOB'.
+Info: $gpio[4]$iobuf_i: adc_spi_miso.O
+Info: pin 'gpio[4]$tr_io' constrained to Bel 'X0/Y29/PIOA'.
+Info: pin 'gpio[3]$tr_io' constrained to Bel 'X0/Y26/PIOD'.
+Info: $gpio[2]$iobuf_i: gpio_TRELLIS_FF_Q_3.Q
+Info: pin 'gpio[2]$tr_io' constrained to Bel 'X0/Y26/PIOC'.
+Info: $gpio[1]$iobuf_i: gpio_LUT4_Z_1.Z
+Info: pin 'gpio[1]$tr_io' constrained to Bel 'X0/Y26/PIOB'.
+Info: $gpio[0]$iobuf_i: gpio_LUT4_Z.Z
+Info: pin 'gpio[0]$tr_io' constrained to Bel 'X0/Y26/PIOA'.
+Info: pin 'led[3]$tr_io' constrained to Bel 'X67/Y0/PIOA'.
+Info: pin 'led[2]$tr_io' constrained to Bel 'X67/Y0/PIOB'.
+Info: pin 'led[1]$tr_io' constrained to Bel 'X65/Y0/PIOB'.
+Info: pin 'led[0]$tr_io' constrained to Bel 'X65/Y0/PIOA'.
+Info: pin 'key[3]$tr_io' constrained to Bel 'X62/Y0/PIOB'.
+Info: pin 'key[2]$tr_io' constrained to Bel 'X62/Y0/PIOA'.
+Info: pin 'key[1]$tr_io' constrained to Bel 'X60/Y0/PIOB'.
+Info: pin 'key[0]$tr_io' constrained to Bel 'X60/Y0/PIOA'.
+Info: pin 'clk25$tr_io' constrained to Bel 'X38/Y0/PIOA'.
+Info: pin 'adc_spi_sclk$tr_io' constrained to Bel 'X72/Y11/PIOC'.
+Info: pin 'adc_spi_mosi$tr_io' constrained to Bel 'X72/Y11/PIOD'.
+Info: pin 'adc_spi_miso$tr_io' constrained to Bel 'X72/Y20/PIOA'.
+Info: pin 'adc_spi_csn$tr_io' constrained to Bel 'X72/Y14/PIOA'.
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     144 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk25$TRELLIS_IO_IN to global network
+Info:     promoting clock net decoder_inst.slow_clk to global network
+Info:     promoting clock net control_inst.sclk to global network
+Info:     promoting clock net adc_capture_inst.clk2 to global network
+Info: Checksum: 0x6cae7833
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:      23/    197    11%
+Info: 	                DCCA:       4/     56     7%
+Info: 	              DP16KD:       0/     56     0%
+Info: 	          MULT18X18D:       0/     28     0%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:     212/  24288     0%
+Info: 	        TRELLIS_COMB:     960/  24288     3%
+Info: 	        TRELLIS_RAMW:       0/   3036     0%
+
+Info: Placed 23 cells based on constraints.
+Info: Creating initial analytic placement for 441 cells, random placement wirelen = 32662.
+Info:     at initial placer iter 0, wirelen = 1347
+Info:     at initial placer iter 1, wirelen = 1131
+Info:     at initial placer iter 2, wirelen = 1082
+Info:     at initial placer iter 3, wirelen = 1084
+Info: Running main analytical placer, max placement attempts per cell = 179700.
+Info:     at iteration #1, type ALL: wirelen solved = 1071, spread = 4725, legal = 4815; time = 0.04s
+Info:     at iteration #2, type ALL: wirelen solved = 1187, spread = 3639, legal = 3806; time = 0.03s
+Info:     at iteration #3, type ALL: wirelen solved = 1229, spread = 3410, legal = 3561; time = 0.02s
+Info:     at iteration #4, type ALL: wirelen solved = 1316, spread = 3042, legal = 3329; time = 0.03s
+Info:     at iteration #5, type ALL: wirelen solved = 1376, spread = 3049, legal = 3294; time = 0.03s
+Info:     at iteration #6, type ALL: wirelen solved = 1383, spread = 2718, legal = 2909; time = 0.03s
+Info:     at iteration #7, type ALL: wirelen solved = 1436, spread = 2914, legal = 3157; time = 0.02s
+Info:     at iteration #8, type ALL: wirelen solved = 1468, spread = 2879, legal = 3092; time = 0.02s
+Info:     at iteration #9, type ALL: wirelen solved = 1557, spread = 2778, legal = 2992; time = 0.02s
+Info:     at iteration #10, type ALL: wirelen solved = 1575, spread = 2725, legal = 3064; time = 0.02s
+Info:     at iteration #11, type ALL: wirelen solved = 1596, spread = 2638, legal = 2934; time = 0.03s
+Info: HeAP Placer Time: 0.44s
+Info:   of which solving equations: 0.29s
+Info:   of which spreading cells: 0.03s
+Info:   of which strict legalisation: 0.02s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 435, wirelen = 2909
+Info:   at iteration #5: temp = 0.000000, timing cost = 351, wirelen = 2512
+Info:   at iteration #10: temp = 0.000000, timing cost = 424, wirelen = 2400
+Info:   at iteration #13: temp = 0.000000, timing cost = 409, wirelen = 2378 
+Info: SA placement time 0.79s
+
+Info: Max frequency for clock     '$glbnet$control_inst.sclk': 134.90 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$decoder_inst.slow_clk': 111.01 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$adc_capture_inst.clk2': 308.45 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock   '$glbnet$clk25$TRELLIS_IO_IN': 190.19 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                               -> <async>                              : 8.48 ns
+Info: Max delay <async>                               -> posedge $glbnet$adc_capture_inst.clk2: 8.82 ns
+Info: Max delay <async>                               -> posedge $glbnet$clk25$TRELLIS_IO_IN  : 8.98 ns
+Info: Max delay <async>                               -> posedge $glbnet$control_inst.sclk    : 8.02 ns
+Info: Max delay <async>                               -> posedge $glbnet$decoder_inst.slow_clk: 8.66 ns
+Info: Max delay posedge $glbnet$adc_capture_inst.clk2 -> <async>                              : 1.80 ns
+Info: Max delay posedge $glbnet$adc_capture_inst.clk2 -> posedge $glbnet$clk25$TRELLIS_IO_IN  : 1.56 ns
+Info: Max delay posedge $glbnet$clk25$TRELLIS_IO_IN   -> <async>                              : 8.36 ns
+Info: Max delay posedge $glbnet$clk25$TRELLIS_IO_IN   -> posedge $glbnet$adc_capture_inst.clk2: 1.40 ns
+Info: Max delay posedge $glbnet$clk25$TRELLIS_IO_IN   -> posedge $glbnet$control_inst.sclk    : 5.65 ns
+Info: Max delay posedge $glbnet$control_inst.sclk     -> <async>                              : 7.72 ns
+Info: Max delay posedge $glbnet$control_inst.sclk     -> posedge $glbnet$clk25$TRELLIS_IO_IN  : 6.61 ns
+Info: Max delay posedge $glbnet$control_inst.sclk     -> posedge $glbnet$decoder_inst.slow_clk: 1.40 ns
+Info: Max delay posedge $glbnet$decoder_inst.slow_clk -> posedge $glbnet$control_inst.sclk    : 9.42 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 34742,  37122) |************************************************************ 
+Info: [ 37122,  39502) |**********+
+Info: [ 39502,  41882) | 
+Info: [ 41882,  44262) | 
+Info: [ 44262,  46642) | 
+Info: [ 46642,  49022) | 
+Info: [ 49022,  51402) | 
+Info: [ 51402,  53782) | 
+Info: [ 53782,  56162) | 
+Info: [ 56162,  58542) | 
+Info: [ 58542,  60922) | 
+Info: [ 60922,  63302) | 
+Info: [ 63302,  65682) | 
+Info: [ 65682,  68062) | 
+Info: [ 68062,  70442) | 
+Info: [ 70442,  72822) | 
+Info: [ 72822,  75202) |************ 
+Info: [ 75202,  77582) |******************+
+Info: [ 77582,  79962) |*********************************+
+Info: [ 79962,  82342) |***************************+
+Info: Checksum: 0x8aafcf84
+Info: Routing globals...
+Info:     routing clock net $glbnet$adc_capture_inst.clk2 using global 0
+Info:     routing clock net $glbnet$control_inst.sclk using global 1
+Info:     routing clock net $glbnet$decoder_inst.slow_clk using global 2
+Info:     routing clock net $glbnet$clk25$TRELLIS_IO_IN using global 3
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 2900 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      400        599 |  400   599 |      2322|       0.30       0.30|
+Info:       2000 |      780       1194 |  380   595 |      1742|       0.22       0.52|
+Info:       3000 |     1032       1771 |  252   577 |      1016|       0.14       0.66|
+Info:       4000 |     1110       2564 |   78   793 |       104|       0.23       0.89|
+Info:       4104 |     1111       2644 |    1    80 |         0|       0.03       0.92|
+Info: Routing complete.
+Info: Router1 time 0.92s
+Info: Checksum: 0x0992b077
+
+Info: Critical path report for clock '$glbnet$control_inst.sclk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source control_inst.motor_dc_TRELLIS_FF_Q_7.Q
+Info:    routing  1.51  2.04 Net motor_dc[5] (11,20) -> (8,24)
+Info:                          Sink control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_COMB1.A
+Info:                          Defined in:
+Info:                               ./motor_drv/motor_drv.sv:10.20-10.30
+Info:      logic  0.45  2.48 Source control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_COMB1.FCO
+Info:    routing  0.00  2.48 Net control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C[5] (8,24) -> (9,24)
+Info:                          Sink control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./control/control.sv:112.40-112.78
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.55 Source control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  2.55 Net control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT$CCU2_FCI_INT (9,24) -> (9,24)
+Info:                          Sink control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  2.55 Source control_inst.state_LUT4_C_3_Z_LUT4_Z_1_C_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  2.55 Net $nextpnr_CCU2C_19$CIN (9,24) -> (9,24)
+Info:                          Sink $nextpnr_CCU2C_19$CCU2_COMB0.FCI
+Info:      logic  0.44  3.00 Source $nextpnr_CCU2C_19$CCU2_COMB0.F
+Info:    routing  0.71  3.71 Net control_inst.state_LUT4_C_3_Z_LUT4_Z_1_A[2] (9,24) -> (9,23)
+Info:                          Sink control_inst.state_LUT4_C_3_Z_LUT4_Z_1.C
+Info:                          Defined in:
+Info:                               ./control/control.sv:112.40-112.78
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:      logic  0.24  3.94 Source control_inst.state_LUT4_C_3_Z_LUT4_Z_1.F
+Info:    routing  1.26  5.21 Net control_inst.state_LUT4_C_3_Z[1] (9,23) -> (11,20)
+Info:                          Sink control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  5.44 Source control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_Z.F
+Info:    routing  0.80  6.24 Net control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z_B[0] (11,20) -> (11,20)
+Info:                          Sink control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.40  6.64 Source control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.46  7.10 Net control_inst.motor_dc_TRELLIS_FF_Q_7_DI (11,20) -> (11,20)
+Info:                          Sink control_inst.motor_dc_TRELLIS_FF_Q_7.M
+Info:                          Defined in:
+Info:                               ./control/control.sv:48.2-132.5
+Info:      setup  0.00  7.10 Source control_inst.motor_dc_TRELLIS_FF_Q_7.M
+Info: 2.36 ns logic, 4.74 ns routing
+
+Info: Critical path report for clock '$glbnet$decoder_inst.slow_clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source decoder_inst.t1_TRELLIS_FF_Q_19.Q
+Info:    routing  1.46  1.98 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_B_LUT4_Z_1_D[0] (6,26) -> (5,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_9$CCU2_COMB1.A
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:23.13-23.15
+Info:      logic  0.45  2.43 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_9$CCU2_COMB1.FCO
+Info:    routing  0.00  2.43 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[2] (5,30) -> (5,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_3$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.50 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_3$CCU2_COMB0.FCO
+Info:    routing  0.00  2.50 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_3$CCU2_FCI_INT (5,30) -> (5,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_3$CCU2_COMB1.FCI
+Info:      logic  0.00  2.50 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_3$CCU2_COMB1.FCO
+Info:    routing  0.00  2.50 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[4] (5,30) -> (5,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.57 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_2$CCU2_COMB0.FCO
+Info:    routing  0.00  2.57 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_2$CCU2_FCI_INT (5,30) -> (5,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_2$CCU2_COMB1.FCI
+Info:      logic  0.00  2.57 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_2$CCU2_COMB1.FCO
+Info:    routing  0.00  2.57 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[6] (5,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.64 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_1$CCU2_COMB0.FCO
+Info:    routing  0.00  2.64 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_1$CCU2_FCI_INT (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_1$CCU2_COMB1.FCI
+Info:      logic  0.00  2.64 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.64 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[8] (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.71 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  2.71 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT$CCU2_FCI_INT (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  2.71 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  2.71 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[10] (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_8$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.78 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_8$CCU2_COMB0.FCO
+Info:    routing  0.00  2.78 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_8$CCU2_FCI_INT (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_8$CCU2_COMB1.FCI
+Info:      logic  0.00  2.78 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_8$CCU2_COMB1.FCO
+Info:    routing  0.00  2.78 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[12] (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_7$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.86 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_7$CCU2_COMB0.FCO
+Info:    routing  0.00  2.86 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_7$CCU2_FCI_INT (6,30) -> (6,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_7$CCU2_COMB1.FCI
+Info:      logic  0.00  2.86 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_7$CCU2_COMB1.FCO
+Info:    routing  0.00  2.86 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[14] (6,30) -> (7,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_6$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.93 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_6$CCU2_COMB0.FCO
+Info:    routing  0.00  2.93 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_6$CCU2_FCI_INT (7,30) -> (7,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_6$CCU2_COMB1.FCI
+Info:      logic  0.00  2.93 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_6$CCU2_COMB1.FCO
+Info:    routing  0.00  2.93 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[16] (7,30) -> (7,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_5$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  3.00 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_5$CCU2_COMB0.FCO
+Info:    routing  0.00  3.00 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_5$CCU2_FCI_INT (7,30) -> (7,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_5$CCU2_COMB1.FCI
+Info:      logic  0.00  3.00 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_5$CCU2_COMB1.FCO
+Info:    routing  0.00  3.00 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[18] (7,30) -> (7,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_4$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  3.07 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_4$CCU2_COMB0.FCO
+Info:    routing  0.00  3.07 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_4$CCU2_FCI_INT (7,30) -> (7,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_4$CCU2_COMB1.FCI
+Info:      logic  0.00  3.07 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C_CCU2C_COUT_4$CCU2_COMB1.FCO
+Info:    routing  0.00  3.07 Net $nextpnr_CCU2C_29$CIN (7,30) -> (7,30)
+Info:                          Sink $nextpnr_CCU2C_29$CCU2_COMB0.FCI
+Info:      logic  0.44  3.51 Source $nextpnr_CCU2C_29$CCU2_COMB0.F
+Info:    routing  0.51  4.02 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z_C[20] (7,30) -> (7,28)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z.C
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:78.10-78.19
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.24  4.26 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A_LUT4_Z.F
+Info:    routing  0.99  5.25 Net decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1_A[3] (7,28) -> (12,28)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  5.49 Source decoder_inst.bit_count_TRELLIS_FF_Q_6_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B_CCU2C_S1_S0_LUT4_Z_1.F
+Info:    routing  1.06  6.55 Net decoder_inst.bit_count_TRELLIS_FF_Q_1_DI_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_B[2] (12,28) -> (11,31)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  6.79 Source decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  6.79 Net decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT (11,31) -> (11,31)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.30-157.32
+Info:      logic  0.17  6.95 Source decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  6.95 Net decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1 (11,31) -> (11,31)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.54-157.56
+Info:      logic  0.24  7.19 Source decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  7.19 Net decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D0 (11,31) -> (11,31)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.66-157.68
+Info:      logic  0.24  7.43 Source decoder_inst.bit_count_TRELLIS_FF_Q_7_DI_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.62  8.05 Net decoder_inst.bit_count_TRELLIS_FF_Q_7_DI (11,31) -> (10,31)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_7.M
+Info:      setup  0.00  8.05 Source decoder_inst.bit_count_TRELLIS_FF_Q_7.M
+Info: 3.41 ns logic, 4.64 ns routing
+
+Info: Critical path report for clock '$glbnet$adc_capture_inst.clk2' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_4.Q
+Info:    routing  0.88  1.40 Net adc_capture_inst.cs_reg[0] (4,27) -> (3,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2$CCU2_COMB0.B
+Info:                          Defined in:
+Info:                               ./adc_capture/adc_capture.sv:91.17-91.30
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.45  1.85 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2$CCU2_COMB0.FCO
+Info:    routing  0.00  1.85 Net adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2$CCU2_FCI_INT (3,27) -> (3,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2$CCU2_COMB1.FCI
+Info:      logic  0.00  1.85 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2$CCU2_COMB1.FCO
+Info:    routing  0.00  1.85 Net adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2_COUT[2] (3,27) -> (3,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./adc_capture/adc_capture.sv:91.17-91.30
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:65.22-65.25
+Info:      logic  0.07  1.92 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:    routing  0.00  1.92 Net adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT (3,27) -> (3,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:      logic  0.00  1.92 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:    routing  0.00  1.92 Net adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2_COUT[4] (3,27) -> (3,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./adc_capture/adc_capture.sv:91.17-91.30
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:65.22-65.25
+Info:      logic  0.44  2.36 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  0.68  3.04 Net adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z_D[4] (3,27) -> (2,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z.D
+Info:                          Defined in:
+Info:                               ./adc_capture/adc_capture.sv:91.17-91.30
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:      logic  0.24  3.28 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI_LUT4_Z.F
+Info:    routing  0.13  3.41 Net adc_capture_inst.cs_reg_TRELLIS_FF_Q_DI (2,27) -> (2,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q.DI
+Info:      setup  0.00  3.41 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q.DI
+Info: 1.72 ns logic, 1.68 ns routing
+
+Info: Critical path report for clock '$glbnet$clk25$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source servo_inst.pdmw_counter_TRELLIS_FF_Q_5.Q
+Info:    routing  0.90  1.42 Net servo_inst.pdmw_counter[10] (5,19) -> (7,19)
+Info:                          Sink servo_inst.pdm_width_LUT4_A.B
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:13.13-13.25
+Info:      logic  0.24  1.66 Source servo_inst.pdm_width_LUT4_A.F
+Info:    routing  0.42  2.08 Net servo_inst.pdm_width_LUT4_A_Z[2] (7,19) -> (7,19)
+Info:                          Sink servo_inst.pdm_width_LUT4_C.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  2.32 Source servo_inst.pdm_width_LUT4_C.F
+Info:    routing  0.42  2.73 Net servo_inst.pdm_width_LUT4_C_Z[2] (7,19) -> (7,19)
+Info:                          Sink servo_inst.pdm_width_LUT4_B_6.C
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  2.97 Source servo_inst.pdm_width_LUT4_B_6.F
+Info:    routing  1.12  4.09 Net gpio_TRELLIS_FF_Q_3_DI_PFUMX_Z_C0[1] (7,19) -> (6,21)
+Info:                          Sink gpio_TRELLIS_FF_Q_3_DI_PFUMX_Z_BLUT_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.40  4.49 Source gpio_TRELLIS_FF_Q_3_DI_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.62  5.11 Net gpio_TRELLIS_FF_Q_3_DI (6,21) -> (6,22)
+Info:                          Sink gpio_TRELLIS_FF_Q_3.M
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:25.2-47.5
+Info:      setup  0.00  5.11 Source gpio_TRELLIS_FF_Q_3.M
+Info: 1.63 ns logic, 3.47 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> '<async>':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source gpio[7]$tr_io.O
+Info:    routing  5.32  5.32 Net adc_spi_sclk$TRELLIS_IO_OUT (0,29) -> (72,11)
+Info:                          Sink adc_spi_sclk$tr_io.I
+Info:                          Defined in:
+Info:                               top.sv:21.8-21.12
+Info: 0.00 ns logic, 5.32 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$adc_capture_inst.clk2':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source key[3]$tr_io.O
+Info:    routing  6.15  6.15 Net key[3]$TRELLIS_IO_IN (62,0) -> (4,27)
+Info:                          Sink adc_capture_inst.cs_reg_TRELLIS_FF_Q_2.LSR
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:5.27-5.30
+Info:      setup  0.42  6.57 Source adc_capture_inst.cs_reg_TRELLIS_FF_Q_2.LSR
+Info: 0.42 ns logic, 6.15 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk25$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source key[3]$tr_io.O
+Info:    routing  5.68  5.68 Net key[3]$TRELLIS_IO_IN (62,0) -> (4,31)
+Info:                          Sink motor_inst.clock_counter_TRELLIS_FF_Q_2.LSR
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:5.27-5.30
+Info:      setup  0.42  6.11 Source motor_inst.clock_counter_TRELLIS_FF_Q_2.LSR
+Info: 0.42 ns logic, 5.68 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$control_inst.sclk':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source key[3]$tr_io.O
+Info:    routing  5.08  5.08 Net key[3]$TRELLIS_IO_IN (62,0) -> (8,22)
+Info:                          Sink control_inst.servo_dc_TRELLIS_FF_Q_5.LSR
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:5.27-5.30
+Info:      setup  0.42  5.50 Source control_inst.servo_dc_TRELLIS_FF_Q_5.LSR
+Info: 0.42 ns logic, 5.08 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$decoder_inst.slow_clk':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source key[3]$tr_io.O
+Info:    routing  6.40  6.40 Net key[3]$TRELLIS_IO_IN (62,0) -> (11,30)
+Info:                          Sink decoder_inst.bit_count_TRELLIS_FF_Q_6.LSR
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:5.27-5.30
+Info:      setup  0.42  6.83 Source decoder_inst.bit_count_TRELLIS_FF_Q_6.LSR
+Info: 0.42 ns logic, 6.40 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$adc_capture_inst.clk2' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source gpio_TRELLIS_FF_Q_1.Q
+Info:    routing  1.23  1.76 Net $gpio[9]$iobuf_i (2,29) -> (0,32)
+Info:                          Sink gpio[9]$tr_io.I
+Info: 0.52 ns logic, 1.23 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$adc_capture_inst.clk2' -> 'posedge $glbnet$clk25$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source adc_capture_inst.dout_TRELLIS_FF_Q_11.Q
+Info:    routing  0.91  1.43 Net adc_capture_inst.dout[0] (2,26) -> (2,24)
+Info:                          Sink hysteresis_inst.d_signal_LUT4_Z.D
+Info:                          Defined in:
+Info:                               ./adc_capture/adc_capture.sv:45.15-45.19
+Info:      logic  0.24  1.67 Source hysteresis_inst.d_signal_LUT4_Z.F
+Info:    routing  0.13  1.80 Net d_signal[0] (2,24) -> (2,24)
+Info:                          Sink hysteresis_inst.not_d_signal_TRELLIS_FF_Q_11.DI
+Info:                          Defined in:
+Info:                               ./adc_hysteresis/adc_hysteresis.sv:9.22-9.30
+Info:      setup  0.00  1.80 Source hysteresis_inst.not_d_signal_TRELLIS_FF_Q_11.DI
+Info: 0.76 ns logic, 1.04 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk25$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source hysteresis_inst.can_move_fwd_TRELLIS_FF_Q.Q
+Info:    routing  5.02  5.55 Net can_move_fwd (4,21) -> (65,0)
+Info:                          Sink led[1]$tr_io.I
+Info:                          Defined in:
+Info:                               top.sv:5.21-5.24
+Info: 0.52 ns logic, 5.02 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk25$TRELLIS_IO_IN' -> 'posedge $glbnet$adc_capture_inst.clk2':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source hysteresis_inst.adc_ack_TRELLIS_FF_Q.Q
+Info:    routing  0.75  1.27 Net adc_ack (2,30) -> (2,29)
+Info:                          Sink hysteresis_inst.adc_ack_LUT4_C.C
+Info:                          Defined in:
+Info:                               ./adc_hysteresis/adc_hysteresis.sv:11.15-11.22
+Info:      logic  0.24  1.51 Source hysteresis_inst.adc_ack_LUT4_C.F
+Info:    routing  0.13  1.64 Net gpio_TRELLIS_FF_Q_1_DI (2,29) -> (2,29)
+Info:                          Sink gpio_TRELLIS_FF_Q_1.DI
+Info:                          Defined in:
+Info:                               ./adc_capture/adc_capture.sv:66.2-111.5
+Info:      setup  0.00  1.64 Source gpio_TRELLIS_FF_Q_1.DI
+Info: 0.76 ns logic, 0.88 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk25$TRELLIS_IO_IN' -> 'posedge $glbnet$control_inst.sclk':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source hysteresis_inst.can_move_fwd_TRELLIS_FF_Q.Q
+Info:    routing  1.49  2.01 Net can_move_fwd (4,21) -> (9,23)
+Info:                          Sink control_inst.state_LUT4_C_3_Z_LUT4_Z_1.D
+Info:                          Defined in:
+Info:                               top.sv:5.21-5.24
+Info:      logic  0.24  2.25 Source control_inst.state_LUT4_C_3_Z_LUT4_Z_1.F
+Info:    routing  1.26  3.51 Net control_inst.state_LUT4_C_3_Z[1] (9,23) -> (11,20)
+Info:                          Sink control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  3.74 Source control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_Z.F
+Info:    routing  0.80  4.55 Net control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z_B[0] (11,20) -> (11,20)
+Info:                          Sink control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.40  4.95 Source control_inst.motor_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.46  5.41 Net control_inst.motor_dc_TRELLIS_FF_Q_7_DI (11,20) -> (11,20)
+Info:                          Sink control_inst.motor_dc_TRELLIS_FF_Q_7.M
+Info:                          Defined in:
+Info:                               ./control/control.sv:48.2-132.5
+Info:      setup  0.00  5.41 Source control_inst.motor_dc_TRELLIS_FF_Q_7.M
+Info: 1.40 ns logic, 4.01 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$control_inst.sclk' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source control_inst.motor_dc_TRELLIS_FF_Q.Q
+Info:    routing  1.45  1.98 Net motor_dc[4] (9,22) -> (6,22)
+Info:                          Sink gpio_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_COMB0.B
+Info:                          Defined in:
+Info:                               ./motor_drv/motor_drv.sv:10.20-10.30
+Info:      logic  0.45  2.43 Source gpio_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_COMB0.FCO
+Info:    routing  0.00  2.43 Net gpio_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_FCI_INT (6,22) -> (6,22)
+Info:                          Sink gpio_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_COMB1.FCI
+Info:      logic  0.00  2.43 Source gpio_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_COMB1.FCO
+Info:    routing  0.00  2.43 Net gpio_LUT4_Z_C[5] (6,22) -> (7,22)
+Info:                          Sink gpio_LUT4_Z_C_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./motor_drv/motor_drv.sv:33.16-33.40
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:      logic  0.07  2.50 Source gpio_LUT4_Z_C_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  2.50 Net gpio_LUT4_Z_C_CCU2C_COUT$CCU2_FCI_INT (7,22) -> (7,22)
+Info:                          Sink gpio_LUT4_Z_C_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  2.50 Source gpio_LUT4_Z_C_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  2.50 Net $nextpnr_CCU2C_37$CIN (7,22) -> (7,22)
+Info:                          Sink $nextpnr_CCU2C_37$CCU2_COMB0.FCI
+Info:      logic  0.44  2.94 Source $nextpnr_CCU2C_37$CCU2_COMB0.F
+Info:    routing  0.74  3.68 Net gpio_LUT4_Z_C[7] (7,22) -> (5,23)
+Info:                          Sink gpio_LUT4_Z.C
+Info:                          Defined in:
+Info:                               ./motor_drv/motor_drv.sv:33.16-33.40
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:      logic  0.24  3.92 Source gpio_LUT4_Z.F
+Info:    routing  1.35  5.27 Net $gpio[0]$iobuf_i (5,23) -> (0,26)
+Info:                          Sink gpio[0]$tr_io.I
+Info: 1.72 ns logic, 3.54 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$control_inst.sclk' -> 'posedge $glbnet$clk25$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source control_inst.servo_dc_TRELLIS_FF_Q_2.Q
+Info:    routing  1.15  1.68 Net servo_dc[1] (7,21) -> (6,20)
+Info:                          Sink servo_inst.pdm_width_CCU2C_S0_4$CCU2_COMB1.A
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:8.28-8.32
+Info:      logic  0.45  2.13 Source servo_inst.pdm_width_CCU2C_S0_4$CCU2_COMB1.FCO
+Info:    routing  0.00  2.13 Net servo_inst.pdm_width_CCU2C_S0_4_COUT[2] (6,20) -> (6,20)
+Info:                          Sink servo_inst.pdm_width_CCU2C_S0_3$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:23.21-23.42
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:      logic  0.07  2.20 Source servo_inst.pdm_width_CCU2C_S0_3$CCU2_COMB0.FCO
+Info:    routing  0.00  2.20 Net servo_inst.pdm_width_CCU2C_S0_3$CCU2_FCI_INT (6,20) -> (6,20)
+Info:                          Sink servo_inst.pdm_width_CCU2C_S0_3$CCU2_COMB1.FCI
+Info:      logic  0.00  2.20 Source servo_inst.pdm_width_CCU2C_S0_3$CCU2_COMB1.FCO
+Info:    routing  0.00  2.20 Net servo_inst.pdm_width_CCU2C_S0_4_COUT[4] (6,20) -> (6,20)
+Info:                          Sink servo_inst.pdm_width_CCU2C_S0_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:23.21-23.42
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:      logic  0.07  2.27 Source servo_inst.pdm_width_CCU2C_S0_2$CCU2_COMB0.FCO
+Info:    routing  0.00  2.27 Net servo_inst.pdm_width_CCU2C_S0_2$CCU2_FCI_INT (6,20) -> (6,20)
+Info:                          Sink servo_inst.pdm_width_CCU2C_S0_2$CCU2_COMB1.FCI
+Info:      logic  0.40  2.67 Source servo_inst.pdm_width_CCU2C_S0_2$CCU2_COMB1.F
+Info:    routing  0.91  3.58 Net servo_inst.pdm_width[11] (6,20) -> (7,19)
+Info:                          Sink servo_inst.pdm_width_LUT4_A.C
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:12.14-12.23
+Info:      logic  0.24  3.82 Source servo_inst.pdm_width_LUT4_A.F
+Info:    routing  0.42  4.24 Net servo_inst.pdm_width_LUT4_A_Z[2] (7,19) -> (7,19)
+Info:                          Sink servo_inst.pdm_width_LUT4_C.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  4.47 Source servo_inst.pdm_width_LUT4_C.F
+Info:    routing  0.42  4.89 Net servo_inst.pdm_width_LUT4_C_Z[2] (7,19) -> (7,19)
+Info:                          Sink servo_inst.pdm_width_LUT4_B_6.C
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  5.12 Source servo_inst.pdm_width_LUT4_B_6.F
+Info:    routing  1.12  6.24 Net gpio_TRELLIS_FF_Q_3_DI_PFUMX_Z_C0[1] (7,19) -> (6,21)
+Info:                          Sink gpio_TRELLIS_FF_Q_3_DI_PFUMX_Z_BLUT_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.40  6.64 Source gpio_TRELLIS_FF_Q_3_DI_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.62  7.26 Net gpio_TRELLIS_FF_Q_3_DI (6,21) -> (6,22)
+Info:                          Sink gpio_TRELLIS_FF_Q_3.M
+Info:                          Defined in:
+Info:                               ./servo_pdm/servo_pdm.v:25.2-47.5
+Info:      setup  0.00  7.26 Source gpio_TRELLIS_FF_Q_3.M
+Info: 2.63 ns logic, 4.64 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$control_inst.sclk' -> 'posedge $glbnet$decoder_inst.slow_clk':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source control_inst.ack_TRELLIS_FF_Q.Q
+Info:    routing  0.43  0.95 Net ack (13,30) -> (13,30)
+Info:                          Sink control_inst.ack_LUT4_D_1.D
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:4.13-4.16
+Info:      logic  0.24  1.19 Source control_inst.ack_LUT4_D_1.F
+Info:    routing  0.64  1.83 Net decoder_inst.ready_TRELLIS_FF_Q_CE (13,30) -> (13,31)
+Info:                          Sink decoder_inst.ready_TRELLIS_FF_Q.CE
+Info:      setup  0.00  1.83 Source decoder_inst.ready_TRELLIS_FF_Q.CE
+Info: 0.76 ns logic, 1.07 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$decoder_inst.slow_clk' -> 'posedge $glbnet$control_inst.sclk':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source decoder_inst.cmd_TRELLIS_FF_Q_21.Q
+Info:    routing  1.13  1.66 Net command[11] (13,27) -> (12,26)
+Info:                          Sink control_inst.state_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D_L6MUX21_Z_1_D0_PFUMX_Z_BLUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               ./ir_decoder/ir_decoder.v:8.28-8.35
+Info:      logic  0.40  2.06 Source control_inst.state_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D_L6MUX21_Z_1_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  2.06 Net control_inst.state_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D_L6MUX21_Z_1_D0 (12,26) -> (12,26)
+Info:                          Sink control_inst.state_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.34-141.36
+Info:      logic  0.24  2.30 Source control_inst.state_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  1.13  3.42 Net control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C[2] (12,26) -> (11,24)
+Info:                          Sink control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_ALUT_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  3.66 Source control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  3.66 Net control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_ALUT (11,24) -> (11,24)
+Info:                          Sink control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.46-157.48
+Info:      logic  0.17  3.83 Source control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  3.83 Net control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1 (11,24) -> (11,24)
+Info:                          Sink control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.62-157.64
+Info:      logic  0.24  4.07 Source control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  4.07 Net control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_Z (11,24) -> (11,24)
+Info:                          Sink control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72
+Info:      logic  0.24  4.31 Source control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_1_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.96  5.27 Net control_inst.direction_LUT4_C_Z_PFUMX_Z_ALUT_LUT4_Z_C_L6MUX21_SD_Z[3] (11,24) -> (9,21)
+Info:                          Sink control_inst.state_LUT4_C_1.D
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  5.51 Source control_inst.state_LUT4_C_1.F
+Info:    routing  0.00  5.51 Net control_inst.state_LUT4_C_1_Z (9,21) -> (9,21)
+Info:                          Sink control_inst.state_LUT4_C_2.F1
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.30-141.32
+Info:      logic  0.17  5.67 Source control_inst.state_LUT4_C_2.OFX
+Info:    routing  0.00  5.67 Net control_inst.state_LUT4_C_1_Z_PFUMX_ALUT_Z (9,21) -> (9,21)
+Info:                          Sink control_inst.state_LUT4_C_1.FXB
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.38-141.40
+Info:      logic  0.24  5.91 Source control_inst.state_LUT4_C_1.OFX
+Info:    routing  0.72  6.64 Net control_inst.servo_dc_TRELLIS_FF_Q_4_DI_L6MUX21_Z_D0_PFUMX_Z_C0[1] (9,21) -> (7,22)
+Info:                          Sink control_inst.servo_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_ALUT_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:      logic  0.24  6.87 Source control_inst.servo_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  6.87 Net control_inst.servo_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_ALUT (7,22) -> (7,22)
+Info:                          Sink control_inst.servo_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /home/dovk2003/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24
+Info:      logic  0.17  7.04 Source control_inst.servo_dc_TRELLIS_FF_Q_7_DI_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.68  7.72 Net control_inst.servo_dc_TRELLIS_FF_Q_7_DI (7,22) -> (7,21)
+Info:                          Sink control_inst.servo_dc_TRELLIS_FF_Q_7.M
+Info:                          Defined in:
+Info:                               ./control/control.sv:48.2-132.5
+Info:      setup  0.00  7.72 Source control_inst.servo_dc_TRELLIS_FF_Q_7.M
+Info: 3.09 ns logic, 4.62 ns routing
+
+Info: Max frequency for clock     '$glbnet$control_inst.sclk': 140.79 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$decoder_inst.slow_clk': 124.24 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$adc_capture_inst.clk2': 293.60 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock   '$glbnet$clk25$TRELLIS_IO_IN': 195.77 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                               -> <async>                              : 5.32 ns
+Info: Max delay <async>                               -> posedge $glbnet$adc_capture_inst.clk2: 6.57 ns
+Info: Max delay <async>                               -> posedge $glbnet$clk25$TRELLIS_IO_IN  : 6.11 ns
+Info: Max delay <async>                               -> posedge $glbnet$control_inst.sclk    : 5.50 ns
+Info: Max delay <async>                               -> posedge $glbnet$decoder_inst.slow_clk: 6.83 ns
+Info: Max delay posedge $glbnet$adc_capture_inst.clk2 -> <async>                              : 1.76 ns
+Info: Max delay posedge $glbnet$adc_capture_inst.clk2 -> posedge $glbnet$clk25$TRELLIS_IO_IN  : 1.80 ns
+Info: Max delay posedge $glbnet$clk25$TRELLIS_IO_IN   -> <async>                              : 5.55 ns
+Info: Max delay posedge $glbnet$clk25$TRELLIS_IO_IN   -> posedge $glbnet$adc_capture_inst.clk2: 1.64 ns
+Info: Max delay posedge $glbnet$clk25$TRELLIS_IO_IN   -> posedge $glbnet$control_inst.sclk    : 5.41 ns
+Info: Max delay posedge $glbnet$control_inst.sclk     -> <async>                              : 5.27 ns
+Info: Max delay posedge $glbnet$control_inst.sclk     -> posedge $glbnet$clk25$TRELLIS_IO_IN  : 7.26 ns
+Info: Max delay posedge $glbnet$control_inst.sclk     -> posedge $glbnet$decoder_inst.slow_clk: 1.83 ns
+Info: Max delay posedge $glbnet$decoder_inst.slow_clk -> posedge $glbnet$control_inst.sclk    : 7.72 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 34892,  37267) |************************************************************ 
+Info: [ 37267,  39642) |**********+
+Info: [ 39642,  42017) | 
+Info: [ 42017,  44392) | 
+Info: [ 44392,  46767) | 
+Info: [ 46767,  49142) | 
+Info: [ 49142,  51517) | 
+Info: [ 51517,  53892) | 
+Info: [ 53892,  56267) | 
+Info: [ 56267,  58642) | 
+Info: [ 58642,  61017) | 
+Info: [ 61017,  63392) | 
+Info: [ 63392,  65767) | 
+Info: [ 65767,  68142) | 
+Info: [ 68142,  70517) | 
+Info: [ 70517,  72892) | 
+Info: [ 72892,  75267) | 
+Info: [ 75267,  77642) |***************************+
+Info: [ 77642,  80017) |*******************************+
+Info: [ 80017,  82392) |*******************************+
+
+Info: Program finished normally.
